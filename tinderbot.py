@@ -58,8 +58,12 @@ class Tb:
 
         sleep(3)
 
-        nothan = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div[1]/button')
-        nothan.click()
+        try:
+            nothan = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div[1]/button')
+            nothan.click()
+
+        except:
+            pass
 
     def popupcl(self):
         popupcl = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div[2]/button[2]')
